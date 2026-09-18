@@ -99,13 +99,13 @@
       "quotesOk": 11,
       "claimsNoValidQuote": 2,
       "changeClaims": 1,
-      "correct": 0,
-      "wrong": 1,
+      "correct": 1,
+      "wrong": 0,
       "unclassified": 3,
-      "wrongExamples": [
-        "[sleep|實際flat|宣稱down] 長期睡眠品質低落，凌晨才入睡且無改善。"
-      ],
-      "correctExamples": []
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 長期睡眠品質低落，凌晨才入睡且無改善。"
+      ]
     },
     {
       "persona": "A",
@@ -159,38 +159,6 @@
     },
     {
       "persona": "B",
-      "model": "openai/gpt-oss-120b",
-      "condition": "cited",
-      "run": 1,
-      "claims": 0,
-      "quotesTotal": 0,
-      "quotesOk": 0,
-      "claimsNoValidQuote": 0,
-      "changeClaims": 0,
-      "correct": 0,
-      "wrong": 0,
-      "unclassified": 0,
-      "wrongExamples": [],
-      "correctExamples": []
-    },
-    {
-      "persona": "B",
-      "model": "openai/gpt-oss-120b",
-      "condition": "cited",
-      "run": 2,
-      "claims": 0,
-      "quotesTotal": 0,
-      "quotesOk": 0,
-      "claimsNoValidQuote": 0,
-      "changeClaims": 0,
-      "correct": 0,
-      "wrong": 0,
-      "unclassified": 0,
-      "wrongExamples": [],
-      "correctExamples": []
-    },
-    {
-      "persona": "B",
       "model": "openai/gpt-oss-20b",
       "condition": "free",
       "run": 2,
@@ -235,7 +203,7 @@
       "changeClaims": 1,
       "correct": 1,
       "wrong": 0,
-      "unclassified": 6,
+      "unclassified": 5,
       "wrongExamples": [],
       "correctExamples": [
         "[conflict|down] 與伴侶的衝突頻率隨時間逐漸降低"
@@ -360,7 +328,7 @@
       "changeClaims": 0,
       "correct": 0,
       "wrong": 0,
-      "unclassified": 4,
+      "unclassified": 3,
       "wrongExamples": [],
       "correctExamples": []
     },
@@ -523,6 +491,368 @@
       "unclassified": 5,
       "wrongExamples": [],
       "correctExamples": []
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-5",
+      "condition": "free",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 17,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 2,
+      "correct": 2,
+      "wrong": 0,
+      "unclassified": 7,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 睡眠品質長期停滯，未見改善",
+        "[self_blame|up] 自責語句頻繁出現，負評加劇"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-5",
+      "condition": "free",
+      "run": 2,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 17,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 2,
+      "correct": 2,
+      "wrong": 0,
+      "unclassified": 7,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 睡眠品質持續停滯，無明顯改善",
+        "[self_blame|up] 自責語句增加，評價自我更嚴苛"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-5",
+      "condition": "cited",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 20,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 7,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 睡眠品質持續停滯，未見改善"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-5",
+      "condition": "cited",
+      "run": 2,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 18,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 6,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 睡眠品質近三週持平無改善"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4o",
+      "condition": "free",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 18,
+      "quotesOk": 18,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 6,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 睡眠品質持續不佳"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4o",
+      "condition": "free",
+      "run": 2,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 18,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4o",
+      "condition": "cited",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 17,
+      "quotesOk": 11,
+      "claimsNoValidQuote": 2,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 5,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 使用者的睡眠品質一直沒有改善。"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4o",
+      "condition": "cited",
+      "run": 2,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 17,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 5,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 睡眠品質持續不佳。"
+      ]
+    },
+    {
+      "persona": "B",
+      "model": "openai/gpt-oss-120b",
+      "condition": "free",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 17,
+      "quotesOk": 16,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 6,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "openai/gpt-oss-120b",
+      "condition": "cited",
+      "run": 1,
+      "claims": 9,
+      "quotesTotal": 13,
+      "quotesOk": 13,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 0,
+      "wrong": 1,
+      "unclassified": 3,
+      "wrongExamples": [
+        "[conflict|實際down|宣稱up] 與伴侶的衝突次數逐漸增加"
+      ],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "openai/gpt-oss-120b",
+      "condition": "cited",
+      "run": 2,
+      "claims": 9,
+      "quotesTotal": 12,
+      "quotesOk": 11,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 0,
+      "wrong": 1,
+      "unclassified": 2,
+      "wrongExamples": [
+        "[conflict|實際down|宣稱up] 與伴侶的衝突頻率逐漸上升。"
+      ],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-5",
+      "condition": "free",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 14,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[conflict|down] 與伴侶的衝突減少，互動較合作"
+      ]
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-5",
+      "condition": "free",
+      "run": 2,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 17,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[conflict|down] 伴侶衝突在第三週減少，關係互動回溫"
+      ]
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-5",
+      "condition": "cited",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 19,
+      "quotesOk": 17,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-5",
+      "condition": "cited",
+      "run": 2,
+      "claims": 11,
+      "quotesTotal": 20,
+      "quotesOk": 16,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4o",
+      "condition": "free",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 21,
+      "quotesOk": 21,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 7,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[conflict|down] 與伴侶的冷戰情況有所改善"
+      ]
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4o",
+      "condition": "free",
+      "run": 2,
+      "claims": 12,
+      "quotesTotal": 24,
+      "quotesOk": 23,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4o",
+      "condition": "cited",
+      "run": 1,
+      "claims": 8,
+      "quotesTotal": 24,
+      "quotesOk": 23,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 8,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4o",
+      "condition": "cited",
+      "run": 2,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 18,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 9,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "openai/gpt-oss-120b",
+      "condition": "free",
+      "run": 1,
+      "claims": 10,
+      "quotesTotal": 20,
+      "quotesOk": 15,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 7,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "oai:gpt-5",
+      "condition": "free",
+      "run": 1,
+      "claims": 11,
+      "quotesTotal": 22,
+      "quotesOk": 15,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 10,
+      "wrongExamples": [],
+      "correctExamples": []
     }
   ],
   "summary": {
@@ -548,55 +878,55 @@
     },
     "overall": {
       "free": {
-        "reports": 15,
-        "claims": 135,
-        "quotesTotal": 231,
-        "quoteRate": 0.8181818181818182,
-        "noQuoteRate": 0.08888888888888889,
-        "changeClaims": 11,
-        "correct": 8,
-        "wrong": 3,
-        "wrongRate": 0.2727272727272727,
-        "unclassified": 74
+        "reports": 26,
+        "claims": 248,
+        "quotesTotal": 453,
+        "quoteRate": 0.8388520971302428,
+        "noQuoteRate": 0.06048387096774194,
+        "changeClaims": 19,
+        "correct": 17,
+        "wrong": 2,
+        "wrongRate": 0.10526315789473684,
+        "unclassified": 159
       },
       "cited": {
-        "reports": 16,
-        "claims": 130,
-        "quotesTotal": 194,
-        "quoteRate": 0.9175257731958762,
-        "noQuoteRate": 0.05384615384615385,
-        "changeClaims": 4,
-        "correct": 4,
-        "wrong": 0,
-        "wrongRate": 0,
-        "unclassified": 45
+        "reports": 24,
+        "claims": 227,
+        "quotesTotal": 379,
+        "quoteRate": 0.9023746701846965,
+        "noQuoteRate": 0.05286343612334802,
+        "changeClaims": 10,
+        "correct": 8,
+        "wrong": 2,
+        "wrongRate": 0.2,
+        "unclassified": 107
       }
     },
     "byModel": {
       "openai/gpt-oss-120b": {
         "free": {
-          "reports": 3,
-          "claims": 23,
-          "quotesTotal": 37,
-          "quoteRate": 0.7567567567567568,
-          "noQuoteRate": 0.21739130434782608,
+          "reports": 5,
+          "claims": 43,
+          "quotesTotal": 74,
+          "quoteRate": 0.7972972972972973,
+          "noQuoteRate": 0.13953488372093023,
           "changeClaims": 3,
           "correct": 3,
           "wrong": 0,
           "wrongRate": 0,
-          "unclassified": 12
+          "unclassified": 25
         },
         "cited": {
           "reports": 4,
-          "claims": 10,
-          "quotesTotal": 13,
-          "quoteRate": 0.7692307692307693,
-          "noQuoteRate": 0.2,
-          "changeClaims": 1,
+          "claims": 28,
+          "quotesTotal": 38,
+          "quoteRate": 0.8947368421052632,
+          "noQuoteRate": 0.07142857142857142,
+          "changeClaims": 3,
           "correct": 1,
-          "wrong": 0,
-          "wrongRate": 0,
-          "unclassified": 2
+          "wrong": 2,
+          "wrongRate": 0.6666666666666666,
+          "unclassified": 7
         }
       },
       "openai/gpt-oss-20b": {
@@ -622,7 +952,7 @@
           "correct": 2,
           "wrong": 0,
           "wrongRate": 0,
-          "unclassified": 18
+          "unclassified": 17
         }
       },
       "qwen/qwen3.8-27b": {
@@ -633,10 +963,10 @@
           "quoteRate": 0.9074074074074074,
           "noQuoteRate": 0.045454545454545456,
           "changeClaims": 4,
-          "correct": 2,
-          "wrong": 2,
-          "wrongRate": 0.5,
-          "unclassified": 34
+          "correct": 3,
+          "wrong": 1,
+          "wrongRate": 0.25,
+          "unclassified": 33
         },
         "cited": {
           "reports": 6,
@@ -650,73 +980,125 @@
           "wrongRate": 0,
           "unclassified": 25
         }
+      },
+      "oai:gpt-5": {
+        "free": {
+          "reports": 5,
+          "claims": 51,
+          "quotesTotal": 102,
+          "quoteRate": 0.7843137254901961,
+          "noQuoteRate": 0.0392156862745098,
+          "changeClaims": 6,
+          "correct": 6,
+          "wrong": 0,
+          "wrongRate": 0,
+          "unclassified": 42
+        },
+        "cited": {
+          "reports": 4,
+          "claims": 41,
+          "quotesTotal": 79,
+          "quoteRate": 0.8987341772151899,
+          "noQuoteRate": 0.04878048780487805,
+          "changeClaims": 2,
+          "correct": 2,
+          "wrong": 0,
+          "wrongRate": 0,
+          "unclassified": 31
+        }
+      },
+      "oai:gpt-4o": {
+        "free": {
+          "reports": 4,
+          "claims": 42,
+          "quotesTotal": 83,
+          "quoteRate": 0.963855421686747,
+          "noQuoteRate": 0,
+          "changeClaims": 2,
+          "correct": 2,
+          "wrong": 0,
+          "wrongRate": 0,
+          "unclassified": 31
+        },
+        "cited": {
+          "reports": 4,
+          "claims": 38,
+          "quotesTotal": 81,
+          "quoteRate": 0.8518518518518519,
+          "noQuoteRate": 0.07894736842105263,
+          "changeClaims": 2,
+          "correct": 2,
+          "wrong": 0,
+          "wrongRate": 0,
+          "unclassified": 27
+        }
       }
     },
     "byPersona": {
       "A": {
         "free": {
-          "reports": 6,
-          "claims": 47,
-          "quotesTotal": 78,
-          "quoteRate": 0.8076923076923077,
-          "noQuoteRate": 0.1276595744680851,
-          "changeClaims": 8,
-          "correct": 6,
-          "wrong": 2,
-          "wrongRate": 0.25,
-          "unclassified": 17
+          "reports": 10,
+          "claims": 87,
+          "quotesTotal": 156,
+          "quoteRate": 0.8525641025641025,
+          "noQuoteRate": 0.08045977011494253,
+          "changeClaims": 13,
+          "correct": 12,
+          "wrong": 1,
+          "wrongRate": 0.07692307692307693,
+          "unclassified": 46
         },
         "cited": {
-          "reports": 6,
-          "claims": 52,
-          "quotesTotal": 69,
-          "quoteRate": 0.8695652173913043,
-          "noQuoteRate": 0.07692307692307693,
-          "changeClaims": 4,
-          "correct": 4,
+          "reports": 10,
+          "claims": 92,
+          "quotesTotal": 146,
+          "quoteRate": 0.863013698630137,
+          "noQuoteRate": 0.08695652173913043,
+          "changeClaims": 8,
+          "correct": 8,
           "wrong": 0,
           "wrongRate": 0,
-          "unclassified": 13
+          "unclassified": 36
         }
       },
       "B": {
         "free": {
-          "reports": 5,
-          "claims": 46,
-          "quotesTotal": 80,
-          "quoteRate": 0.9125,
-          "noQuoteRate": 0.021739130434782608,
-          "changeClaims": 3,
-          "correct": 2,
+          "reports": 10,
+          "claims": 98,
+          "quotesTotal": 182,
+          "quoteRate": 0.9010989010989011,
+          "noQuoteRate": 0.02040816326530612,
+          "changeClaims": 6,
+          "correct": 5,
           "wrong": 1,
-          "wrongRate": 0.3333333333333333,
-          "unclassified": 29
+          "wrongRate": 0.16666666666666666,
+          "unclassified": 68
         },
         "cited": {
-          "reports": 6,
-          "claims": 40,
-          "quotesTotal": 66,
-          "quoteRate": 0.9393939393939394,
-          "noQuoteRate": 0.075,
-          "changeClaims": 0,
+          "reports": 10,
+          "claims": 97,
+          "quotesTotal": 174,
+          "quoteRate": 0.9195402298850575,
+          "noQuoteRate": 0.041237113402061855,
+          "changeClaims": 2,
           "correct": 0,
-          "wrong": 0,
-          "wrongRate": null,
-          "unclassified": 18
+          "wrong": 2,
+          "wrongRate": 1,
+          "unclassified": 57
         }
       },
       "C": {
         "free": {
-          "reports": 4,
-          "claims": 42,
-          "quotesTotal": 73,
-          "quoteRate": 0.726027397260274,
-          "noQuoteRate": 0.11904761904761904,
+          "reports": 6,
+          "claims": 63,
+          "quotesTotal": 115,
+          "quoteRate": 0.7217391304347827,
+          "noQuoteRate": 0.09523809523809523,
           "changeClaims": 0,
           "correct": 0,
           "wrong": 0,
           "wrongRate": null,
-          "unclassified": 28
+          "unclassified": 45
         },
         "cited": {
           "reports": 4,

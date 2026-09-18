@@ -41,7 +41,7 @@ function topicOf(text) {
 }
 
 // 主張的方向。先判有沒有明說沒變化，再看極性詞，最後才看「逐漸」這類中性的變化詞
-const NO_CHANGE = /未見|未改善|沒有改善|沒有變好|沒有變化|無變化|持平|差不多|依然|仍然|一直都|持續不佳|持續未|維持/;
+const NO_CHANGE = /未見改善|未改善|沒有改善|無明顯改善|無改善|沒有變好|沒有變化|無變化|持平|停滯|差不多|一直都|持續不佳|持續未|維持(不變|原狀|穩定|平穩)/;
 const RISE = /增加|變多|上升|加劇|惡化|升高|更頻繁|更嚴重|變得更/;
 const FALL = /減少|變少|下降|降低|緩和|改善|好轉|趨緩|變得更好/;
 const CHANGE_NEUTRAL = /越來越|逐漸|漸漸|日益|一週比一週|隨時間|趨勢/;
@@ -162,4 +162,4 @@ for (const [p, v] of Object.entries(summary.byPersona)) {
   console.log(`  ${p}  free ${v.free.correct}對/${v.free.wrong}錯　cited ${v.cited.correct}對/${v.cited.wrong}錯`);
 }
 console.log('\n判錯的例子');
-for (const r of rows) for (const e of r.wrongExamples.slice(0, 1)) console.log(`  ${r.persona} ${r.model.split('/')[1]} ${r.condition}: ${e}`);
+for (const r of rows) for (const e of r.wrongExamples.slice(0, 1)) console.log(`  ${r.persona} ${r.model.replace('oai:', '').split('/').pop()} ${r.condition}: ${e}`);
