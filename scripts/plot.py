@@ -32,16 +32,16 @@ def draw(ax, getter, title, ylabel):
                 xs.append(k + i * width)
                 vals.append(v * 100)
         bars = ax.bar(xs, vals, width, label=label, color=color)
-        ax.bar_label(bars, fmt="%.0f%%", fontsize=8.5)
+        ax.bar_label(bars, fmt="%.0f%%", fontsize=11)
     for k, m in enumerate(MODELS):
         if getter(m, "free") is None and getter(m, "cited") is None:
-            ax.text(k + width / 2, 6, "無資料", ha="center", fontsize=8.5, color="#888")
+            ax.text(k + width / 2, 6, "無資料", ha="center", fontsize=10, color="#888")
     ax.set_xticks([x + width / 2 for x in range(len(MODELS))])
-    ax.set_xticklabels(short, fontsize=8, rotation=15)
-    ax.set_ylabel(ylabel, fontsize=9)
-    ax.set_title(title, fontsize=10.5)
+    ax.set_xticklabels(short, fontsize=11)
+    ax.set_ylabel(ylabel, fontsize=11)
+    ax.set_title(title, fontsize=13, pad=10)
     ax.set_ylim(0, 112)
-    ax.legend(fontsize=8, loc="upper right")
+    ax.legend(fontsize=10, loc="upper right")
 
 
 def ctrl(key):
@@ -52,21 +52,23 @@ def ctrl(key):
     return get
 
 
-fig, axes = plt.subplots(1, 3, figsize=(16, 4.8))
+fig = plt.figure(figsize=(12.5, 9.5))
+gs = fig.add_gridspec(2, 2, height_ratios=[1, 1], hspace=0.42, wspace=0.22)
 
+draw(fig.add_subplot(gs[0, 0]), ctrl("selfLabelledRate"), "模型把主張自己標成「趨勢」", "自稱趨勢的主張佔比")
+draw(fig.add_subplot(gs[0, 1]), ctrl("directionalRate"), "句子真的寫出方向（越來越、逐漸增加）", "有明確變化措辭的主張佔比")
 draw(
-    axes[0],
+    fig.add_subplot(gs[1, :]),
     lambda m, c: scores["byModel"].get(m, {}).get(c, {}).get("quoteRate"),
-    "模型附的引用，有多少真的在日誌裡",
+    "模型附的引用，有多少真的在日誌裡（全部三位人物）",
     "引文可逐字對回原文的比例",
 )
-draw(axes[1], ctrl("selfLabelledRate"), "對照組：模型把主張自己標成「趨勢」", "自稱趨勢的主張佔比")
-draw(axes[2], ctrl("directionalRate"), "對照組：句子真的寫出方向（越來越、逐漸增加）", "有明確變化措辭的主張佔比")
 
 fig.suptitle(
-    "跨週自我覺察報告的忠實度｜對照組是一位三週毫無變化的虛構人物，任何「變化」都沒有依據", fontsize=12.5
+    "上排是對照組：一位三週毫無變化的虛構人物，她的報告裡任何「變化」都沒有依據",
+    fontsize=14,
+    y=0.97,
 )
-fig.tight_layout()
 out = ROOT / "docs" / "results.png"
 out.parent.mkdir(exist_ok=True)
 fig.savefig(out, dpi=160)
