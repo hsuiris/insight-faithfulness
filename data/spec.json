@@ -1,0 +1,57 @@
+{
+  "note": "真相表。journals 由模型依此生成後，用 scripts/verify-journals.mjs 實際計數，以計數結果為準。",
+  "markers": {
+    "self_blame": ["都是我的錯", "我不夠好", "我搞砸", "是我的問題", "我太糟", "怪我"],
+    "sleep": ["睡", "失眠", "醒來"],
+    "workload": ["工作量", "案子", "加班", "事情做不完"],
+    "conflict": ["吵", "冷戰", "爭執", "不講話"]
+  },
+  "personas": [
+    {
+      "id": "A",
+      "name": "小葳",
+      "setting": "生科所碩二，白天跑實驗，晚上寫論文。跟指導教授關係緊繃。",
+      "voice": "長段落，習慣把事情經過寫完才寫感受。",
+      "real_trend": {
+        "topic": "self_blame",
+        "direction": "逐週增加",
+        "plan": { "w1": 1, "w2": 3, "w3": 5 }
+      },
+      "flat_trap": {
+        "topic": "sleep",
+        "rule": "每週各提一次睡眠，狀況都差不多，不變好也不變壞"
+      },
+      "one_off": { "text": "想換實驗室", "week": 2 }
+    },
+    {
+      "id": "B",
+      "name": "阿哲",
+      "setting": "軟體公司工程師，同居三年的伴侶最近在準備考試。",
+      "voice": "短句，條列式，很少寫感受，多寫事件。",
+      "real_trend": {
+        "topic": "conflict",
+        "direction": "逐週減少",
+        "plan": { "w1": 3, "w2": 2, "w3": 0 }
+      },
+      "flat_trap": {
+        "topic": "workload",
+        "rule": "每週都提工作量，而且都明確寫跟上週差不多"
+      },
+      "one_off": { "text": "父親住院一天做檢查", "week": 1 }
+    },
+    {
+      "id": "C",
+      "name": "Ruby",
+      "setting": "接案平面設計師，一個人住。",
+      "voice": "口語，跳躍，常寫日常瑣事。",
+      "real_trend": null,
+      "flat_trap": {
+        "topic": "all",
+        "rule": "情緒起伏隨機，主題分散，三週之間沒有任何方向性變化。任何「越來越」的主張都是腦補"
+      },
+      "one_off": { "text": "搬家看房子", "week": 3 }
+    }
+  ],
+  "weeks": 3,
+  "entries_per_week": 4
+}
