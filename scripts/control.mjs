@@ -9,7 +9,7 @@ const reports = JSON.parse(readFileSync(new URL('../data/reports.json', import.m
 // 只有明確指出方向或跨時間比較的措辭才算
 const DIRECTIONAL = /越來越|逐漸|漸漸|日益|一週比一週|隨時間|一次比一次|增加|變多|上升|加劇|惡化|升高|更頻繁|更嚴重|減少|變少|下降|降低|趨緩|好轉|從.{0,8}(到|變成)|相較(於)?(前|上)/;
 
-const MODELS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b', 'oai:gpt-5', 'oai:gpt-4o'];
+const MODELS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b', 'oai:gpt-5', 'oai:gpt-4o', 'oai:gpt-4.1'];
 const out = {};
 for (const m of MODELS) {
   out[m] = {};

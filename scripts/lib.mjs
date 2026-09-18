@@ -7,6 +7,7 @@ export const MODELS = [
   'qwen/qwen3.8-27b',
   'oai:gpt-5',
   'oai:gpt-4o',
+  'oai:gpt-4.1',
 ];
 
 // oai: 開頭走 OpenAI，其餘走 Groq
