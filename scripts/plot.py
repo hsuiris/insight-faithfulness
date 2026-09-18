@@ -17,7 +17,7 @@ for name in ["Noto Sans CJK TC", "PingFang TC", "Heiti TC", "Arial Unicode MS", 
         break
 plt.rcParams["axes.unicode_minus"] = False
 
-MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b", "oai:gpt-5", "oai:gpt-4o"]
+MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b", "oai:gpt-5", "oai:gpt-4o", "oai:gpt-4.1"]
 short = [m.replace("oai:", "").split("/")[-1] for m in MODELS]
 conds = [("free", "自由撰寫", "#d9694f"), ("cited", "要求逐字引用", "#3f8f7a")]
 width = 0.36

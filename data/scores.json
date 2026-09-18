@@ -965,6 +965,222 @@
       "unclassified": 8,
       "wrongExamples": [],
       "correctExamples": []
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4.1",
+      "condition": "free",
+      "run": 1,
+      "claims": 11,
+      "quotesTotal": 22,
+      "quotesOk": 22,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 8,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 近三週你的睡眠品質持續不佳，未見改善。"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4.1",
+      "condition": "free",
+      "run": 2,
+      "claims": 12,
+      "quotesTotal": 24,
+      "quotesOk": 22,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 10,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 你的睡眠品質持續不佳，且無明顯改善或惡化。"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4.1",
+      "condition": "cited",
+      "run": 1,
+      "claims": 11,
+      "quotesTotal": 24,
+      "quotesOk": 24,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 0,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 你近期的睡眠品質持續未改善。"
+      ]
+    },
+    {
+      "persona": "A",
+      "model": "oai:gpt-4.1",
+      "condition": "cited",
+      "run": 2,
+      "claims": 11,
+      "quotesTotal": 29,
+      "quotesOk": 28,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 1,
+      "correct": 1,
+      "wrong": 0,
+      "unclassified": 4,
+      "wrongExamples": [],
+      "correctExamples": [
+        "[sleep|flat] 你的睡眠狀況持續不佳，並未改善。"
+      ]
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4.1",
+      "condition": "free",
+      "run": 1,
+      "claims": 12,
+      "quotesTotal": 23,
+      "quotesOk": 22,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 11,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4.1",
+      "condition": "free",
+      "run": 2,
+      "claims": 12,
+      "quotesTotal": 23,
+      "quotesOk": 23,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 11,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4.1",
+      "condition": "cited",
+      "run": 1,
+      "claims": 11,
+      "quotesTotal": 21,
+      "quotesOk": 21,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 10,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "B",
+      "model": "oai:gpt-4.1",
+      "condition": "cited",
+      "run": 2,
+      "claims": 11,
+      "quotesTotal": 19,
+      "quotesOk": 18,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 3,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "openai/gpt-oss-120b",
+      "condition": "free",
+      "run": 2,
+      "claims": 11,
+      "quotesTotal": 18,
+      "quotesOk": 14,
+      "claimsNoValidQuote": 1,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 7,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "oai:gpt-4.1",
+      "condition": "free",
+      "run": 1,
+      "claims": 12,
+      "quotesTotal": 23,
+      "quotesOk": 17,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 10,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "oai:gpt-4.1",
+      "condition": "free",
+      "run": 2,
+      "claims": 12,
+      "quotesTotal": 22,
+      "quotesOk": 22,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 11,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "oai:gpt-4.1",
+      "condition": "cited",
+      "run": 1,
+      "claims": 11,
+      "quotesTotal": 22,
+      "quotesOk": 20,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 4,
+      "wrongExamples": [],
+      "correctExamples": []
+    },
+    {
+      "persona": "C",
+      "model": "oai:gpt-4.1",
+      "condition": "cited",
+      "run": 2,
+      "claims": 12,
+      "quotesTotal": 26,
+      "quotesOk": 25,
+      "claimsNoValidQuote": 0,
+      "changeClaims": 0,
+      "correct": 0,
+      "wrong": 0,
+      "unclassified": 3,
+      "wrongExamples": [],
+      "correctExamples": []
     }
   ],
   "summary": {
@@ -990,43 +1206,43 @@
     },
     "overall": {
       "free": {
-        "reports": 29,
-        "claims": 280,
-        "quotesTotal": 513,
-        "quoteRate": 0.8265107212475633,
-        "noQuoteRate": 0.060714285714285714,
-        "changeClaims": 19,
-        "correct": 17,
+        "reports": 36,
+        "claims": 362,
+        "quotesTotal": 668,
+        "quoteRate": 0.8473053892215568,
+        "noQuoteRate": 0.049723756906077346,
+        "changeClaims": 21,
+        "correct": 19,
         "wrong": 2,
-        "wrongRate": 0.10526315789473684,
-        "unclassified": 187
+        "wrongRate": 0.09523809523809523,
+        "unclassified": 255
       },
       "cited": {
-        "reports": 28,
-        "claims": 266,
-        "quotesTotal": 460,
-        "quoteRate": 0.8956521739130435,
-        "noQuoteRate": 0.045112781954887216,
-        "changeClaims": 10,
-        "correct": 8,
+        "reports": 34,
+        "claims": 333,
+        "quotesTotal": 601,
+        "quoteRate": 0.9118136439267887,
+        "noQuoteRate": 0.036036036036036036,
+        "changeClaims": 12,
+        "correct": 10,
         "wrong": 2,
-        "wrongRate": 0.2,
-        "unclassified": 141
+        "wrongRate": 0.16666666666666666,
+        "unclassified": 165
       }
     },
     "byModel": {
       "openai/gpt-oss-120b": {
         "free": {
-          "reports": 5,
-          "claims": 43,
-          "quotesTotal": 74,
-          "quoteRate": 0.7972972972972973,
-          "noQuoteRate": 0.13953488372093023,
+          "reports": 6,
+          "claims": 54,
+          "quotesTotal": 92,
+          "quoteRate": 0.7934782608695652,
+          "noQuoteRate": 0.12962962962962962,
           "changeClaims": 3,
           "correct": 3,
           "wrong": 0,
           "wrongRate": 0,
-          "unclassified": 25
+          "unclassified": 32
         },
         "cited": {
           "reports": 4,
@@ -1144,85 +1360,111 @@
           "wrongRate": 0,
           "unclassified": 44
         }
+      },
+      "oai:gpt-4.1": {
+        "free": {
+          "reports": 6,
+          "claims": 71,
+          "quotesTotal": 137,
+          "quoteRate": 0.9343065693430657,
+          "noQuoteRate": 0,
+          "changeClaims": 2,
+          "correct": 2,
+          "wrong": 0,
+          "wrongRate": 0,
+          "unclassified": 61
+        },
+        "cited": {
+          "reports": 6,
+          "claims": 67,
+          "quotesTotal": 141,
+          "quoteRate": 0.9645390070921985,
+          "noQuoteRate": 0,
+          "changeClaims": 2,
+          "correct": 2,
+          "wrong": 0,
+          "wrongRate": 0,
+          "unclassified": 24
+        }
       }
     },
     "byPersona": {
       "A": {
         "free": {
-          "reports": 10,
-          "claims": 87,
-          "quotesTotal": 156,
-          "quoteRate": 0.8525641025641025,
-          "noQuoteRate": 0.08045977011494253,
-          "changeClaims": 13,
-          "correct": 12,
+          "reports": 12,
+          "claims": 110,
+          "quotesTotal": 202,
+          "quoteRate": 0.8762376237623762,
+          "noQuoteRate": 0.06363636363636363,
+          "changeClaims": 15,
+          "correct": 14,
           "wrong": 1,
-          "wrongRate": 0.07692307692307693,
-          "unclassified": 46
+          "wrongRate": 0.06666666666666667,
+          "unclassified": 64
         },
         "cited": {
-          "reports": 10,
-          "claims": 92,
-          "quotesTotal": 146,
-          "quoteRate": 0.863013698630137,
-          "noQuoteRate": 0.08695652173913043,
-          "changeClaims": 8,
-          "correct": 8,
+          "reports": 12,
+          "claims": 114,
+          "quotesTotal": 199,
+          "quoteRate": 0.8944723618090452,
+          "noQuoteRate": 0.07017543859649122,
+          "changeClaims": 10,
+          "correct": 10,
           "wrong": 0,
           "wrongRate": 0,
-          "unclassified": 36
+          "unclassified": 40
         }
       },
       "B": {
         "free": {
-          "reports": 10,
-          "claims": 98,
-          "quotesTotal": 182,
-          "quoteRate": 0.9010989010989011,
-          "noQuoteRate": 0.02040816326530612,
+          "reports": 12,
+          "claims": 122,
+          "quotesTotal": 228,
+          "quoteRate": 0.9166666666666666,
+          "noQuoteRate": 0.01639344262295082,
           "changeClaims": 6,
           "correct": 5,
           "wrong": 1,
           "wrongRate": 0.16666666666666666,
-          "unclassified": 68
+          "unclassified": 90
         },
         "cited": {
-          "reports": 10,
-          "claims": 97,
-          "quotesTotal": 174,
-          "quoteRate": 0.9195402298850575,
-          "noQuoteRate": 0.041237113402061855,
+          "reports": 12,
+          "claims": 119,
+          "quotesTotal": 214,
+          "quoteRate": 0.9299065420560748,
+          "noQuoteRate": 0.03361344537815126,
           "changeClaims": 2,
           "correct": 0,
           "wrong": 2,
           "wrongRate": 1,
-          "unclassified": 57
+          "unclassified": 70
         }
       },
       "C": {
         "free": {
-          "reports": 9,
-          "claims": 95,
-          "quotesTotal": 175,
-          "quoteRate": 0.7257142857142858,
-          "noQuoteRate": 0.08421052631578947,
+          "reports": 12,
+          "claims": 130,
+          "quotesTotal": 238,
+          "quoteRate": 0.7563025210084033,
+          "noQuoteRate": 0.06923076923076923,
           "changeClaims": 0,
           "correct": 0,
           "wrong": 0,
           "wrongRate": null,
-          "unclassified": 73
+          "unclassified": 101
         },
         "cited": {
-          "reports": 8,
-          "claims": 77,
-          "quotesTotal": 140,
-          "quoteRate": 0.9,
+          "reports": 10,
+          "claims": 100,
+          "quotesTotal": 188,
+          "quoteRate": 0.9095744680851063,
           "noQuoteRate": 0,
           "changeClaims": 0,
           "correct": 0,
           "wrong": 0,
           "wrongRate": null,
-          "unclassified": 48
+          "unclassified": 55
         }
       }
     }

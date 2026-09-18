@@ -1,12 +1,12 @@
 {
   "openai/gpt-oss-120b": {
     "free": {
-      "reports": 1,
-      "claims": 10,
-      "selfLabelled": 6,
-      "selfLabelledRate": 0.6,
-      "directional": 4,
-      "directionalRate": 0.4,
+      "reports": 2,
+      "claims": 21,
+      "selfLabelled": 13,
+      "selfLabelledRate": 0.6190476190476191,
+      "directional": 6,
+      "directionalRate": 0.2857142857142857,
       "examples": [
         "工作期限越來越緊迫，常感到時間壓力",
         "身體不適感持續增加，常出現手腕、肩頸酸痛",
@@ -107,6 +107,30 @@
       "directional": 0,
       "directionalRate": 0,
       "examples": []
+    }
+  },
+  "oai:gpt-4.1": {
+    "free": {
+      "reports": 2,
+      "claims": 24,
+      "selfLabelled": 21,
+      "selfLabelledRate": 0.875,
+      "directional": 0,
+      "directionalRate": 0,
+      "examples": []
+    },
+    "cited": {
+      "reports": 2,
+      "claims": 23,
+      "selfLabelled": 7,
+      "selfLabelledRate": 0.30434782608695654,
+      "directional": 3,
+      "directionalRate": 0.13043478260869565,
+      "examples": [
+        "你逐漸從被動等待案子變得對未來有期待與小小的計畫。",
+        "你在日常中逐漸學會自我調適與幽默面對挫折。",
+        "對日常小事逐漸能感受到平靜與自得。"
+      ]
     }
   }
 }
