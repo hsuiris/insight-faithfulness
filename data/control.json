@@ -1,0 +1,112 @@
+{
+  "openai/gpt-oss-120b": {
+    "free": {
+      "reports": 1,
+      "claims": 10,
+      "selfLabelled": 6,
+      "selfLabelledRate": 0.6,
+      "directional": 4,
+      "directionalRate": 0.4,
+      "examples": [
+        "工作期限越來越緊迫，常感到時間壓力",
+        "身體不適感持續增加，常出現手腕、肩頸酸痛",
+        "貓咪的陪伴能顯著降低焦慮感"
+      ]
+    },
+    "cited": null
+  },
+  "openai/gpt-oss-20b": {
+    "free": {
+      "reports": 2,
+      "claims": 20,
+      "selfLabelled": 13,
+      "selfLabelledRate": 0.65,
+      "directional": 3,
+      "directionalRate": 0.15,
+      "examples": [
+        "對客戶要求的敏感度逐漸提升",
+        "工作壓力持續升高，導致身體不適",
+        "工作與生活界線模糊，導致睡眠質量下降"
+      ]
+    },
+    "cited": {
+      "reports": 2,
+      "claims": 18,
+      "selfLabelled": 5,
+      "selfLabelledRate": 0.2777777777777778,
+      "directional": 1,
+      "directionalRate": 0.05555555555555555,
+      "examples": [
+        "夜間工作導致睡眠質量下降"
+      ]
+    }
+  },
+  "qwen/qwen3.8-27b": {
+    "free": {
+      "reports": 2,
+      "claims": 22,
+      "selfLabelled": 15,
+      "selfLabelledRate": 0.6818181818181818,
+      "directional": 1,
+      "directionalRate": 0.045454545454545456,
+      "examples": [
+        "近期情緒從緊繃逐漸轉向平靜與接纳"
+      ]
+    },
+    "cited": {
+      "reports": 2,
+      "claims": 20,
+      "selfLabelled": 8,
+      "selfLabelledRate": 0.4,
+      "directional": 3,
+      "directionalRate": 0.15,
+      "examples": [
+        "面對客戶模糊要求時，焦慮感隨時間增加",
+        "對客戶模糊反饋的焦慮隨時間加劇。",
+        "工作壓力導致的身體不適感逐漸增強。"
+      ]
+    }
+  },
+  "oai:gpt-5": {
+    "free": {
+      "reports": 2,
+      "claims": 23,
+      "selfLabelled": 21,
+      "selfLabelledRate": 0.9130434782608695,
+      "directional": 0,
+      "directionalRate": 0,
+      "examples": []
+    },
+    "cited": {
+      "reports": 2,
+      "claims": 20,
+      "selfLabelled": 17,
+      "selfLabelledRate": 0.85,
+      "directional": 0,
+      "directionalRate": 0,
+      "examples": []
+    }
+  },
+  "oai:gpt-4o": {
+    "free": {
+      "reports": 2,
+      "claims": 20,
+      "selfLabelled": 17,
+      "selfLabelledRate": 0.85,
+      "directional": 1,
+      "directionalRate": 0.05,
+      "examples": [
+        "工作壓力增加，身體反應明顯"
+      ]
+    },
+    "cited": {
+      "reports": 2,
+      "claims": 19,
+      "selfLabelled": 17,
+      "selfLabelledRate": 0.8947368421052632,
+      "directional": 0,
+      "directionalRate": 0,
+      "examples": []
+    }
+  }
+}

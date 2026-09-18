@@ -1,7 +1,29 @@
 // 共用：Groq 呼叫、JSON 解析、文字正規化
 import { readFileSync } from 'node:fs';
 
-export const MODELS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
+export const MODELS = [
+  'openai/gpt-oss-120b',
+  'openai/gpt-oss-20b',
+  'qwen/qwen3.8-27b',
+  'oai:gpt-5',
+  'oai:gpt-4o',
+];
+
+// oai: 開頭走 OpenAI，其餘走 Groq
+export function providerOf(model) {
+  return model.startsWith('oai:')
+    ? { base: 'https://api.openai.com/v1', name: model.slice(4), key: openaiKey(), throttle: false }
+    : { base: 'https://api.groq.com/openai/v1', name: model, key: groqKey(), throttle: true };
+}
+
+export function openaiKey() {
+  if (process.env.OPENAI_API_KEY) return process.env.OPENAI_API_KEY;
+  const line = readFileSync(new URL('../.env', import.meta.url), 'utf8')
+    .split('\n')
+    .find((l) => l.startsWith('OPENAI_API_KEY='));
+  if (!line) throw new Error('找不到 OPENAI_API_KEY');
+  return line.slice('OPENAI_API_KEY='.length).trim().replace(/^["']|["']$/g, '');
+}
 
 export function groqKey() {
   if (process.env.GROQ_API_KEY) return process.env.GROQ_API_KEY;
@@ -17,22 +39,28 @@ let lastCall = 0;
 const TPM = 8000;
 
 export async function chat({ model, system, user, temperature = 0.6, json = true, retries = 8, maxTokens = 2000 }) {
-  const key = groqKey();
+  const p = providerOf(model);
+  const key = p.key;
   for (let attempt = 0; attempt < retries; attempt++) {
     const since = Date.now() - lastCall;
-    const minGap = Math.max(32000, Math.round(((user.length / 2 + system.length / 2 + maxTokens) / TPM) * 60000));
+    // Groq 免費方案要節流；OpenAI 是用量計費，只留最小間隔
+    const minGap = p.throttle
+      ? Math.max(32000, Math.round(((user.length / 2 + system.length / 2 + maxTokens) / TPM) * 60000))
+      : 1000;
     if (since < minGap) await new Promise((r) => setTimeout(r, minGap - since));
     lastCall = Date.now();
-    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    const res = await fetch(`${p.base}/chat/completions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
-      signal: AbortSignal.timeout(180000),
+      signal: AbortSignal.timeout(600000),
       body: JSON.stringify({
-        model,
-        temperature,
+        model: p.name,
+        // GPT-5 只接受預設溫度
+        ...(p.name.startsWith('gpt-5') ? {} : { temperature }),
         max_completion_tokens: maxTokens,
         // gpt-oss 是推理模型，預設會先花大量 token 思考，導致 JSON 還沒輸出就用完額度
-        ...(model.startsWith('openai/gpt-oss') ? { reasoning_effort: 'low' } : {}),
+        // gpt-oss 與 gpt-5 都是推理模型，預設會先花大量 token 思考，JSON 還沒輸出就用完額度
+        ...(model.startsWith('openai/gpt-oss') || p.name.startsWith('gpt-5') ? { reasoning_effort: 'low' } : {}),
         ...(json ? { response_format: { type: 'json_object' } } : {}),
         messages: [
           { role: 'system', content: system },
